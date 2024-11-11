@@ -1,7 +1,6 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
-
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', fn() => [
+    'php' => PHP_VERSION,
+    'laravel' => app()->version()
+]);
